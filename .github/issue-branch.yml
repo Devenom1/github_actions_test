@@ -1,5 +1,5 @@
 gitSafeReplacementChar: '-'
-branchName: '${issue.number}-${issue.title}'
+branchName: 'AUA-${issue.number}-${issue.title}'
 branches:
   - label: enhancement
     prefix: feature/
