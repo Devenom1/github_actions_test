@@ -10,5 +10,5 @@ branches:
   - label: bug
     prefix: bugfix/
     skip: false
-  - label: *
+  - label: '*'
     skip: true
