@@ -1,5 +1,5 @@
 gitSafeReplacementChar: '-'
-branchName: 'AN-${issue.number}-${issue.title,}'
+branchName: 'AUA-${issue.number}-${issue.title,}'
 branches:
   - label: enhancement
     prefix: feature/
@@ -12,6 +12,3 @@ branches:
     skip: false
   - label: *
     skip: true
-copyIssueLabelsToPR: true
-copyIssueAssigneeToPR: true
-commentMessage: 'Branch ${branchName} created for issue: ${issue.title}'
