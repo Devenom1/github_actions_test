@@ -1,0 +1,18 @@
+branch-name: 'AN-${issue.number}-${issue.title,}'
+gitSafeReplacementChar: '-'
+defaultBranch: 'master'
+branches:
+  - label: enhancement
+    prefix: feature/
+    skip: false
+  - label: documentation
+    prefix: feature/
+    skip: false
+  - label: bug
+    prefix: bugfix/
+    skip: false
+  - label: *
+    skip: true
+copyIssueLabelsToPR: true
+copyIssueAssigneeToPR: true
+commentMessage: 'Branch ${branchName} created for issue: ${issue.title}'
