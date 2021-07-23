@@ -3,7 +3,7 @@ branchName: 'AUA-${issue.number}-${issue.title,}'
 branches:
   - label: 
       -enhancement
-      -new feature
+      -'new feature'
     prefix: feature/
     skip: false
   - label: documentation
