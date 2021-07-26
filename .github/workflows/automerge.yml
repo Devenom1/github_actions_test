@@ -1,15 +1,18 @@
+name: Sync multiple branches
 on:
   push:
     branches:
-      - "master"
+      - master
 jobs:
-  merge-branch:
+  sync-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: everlytic/branch-merge@1.1.2
+      - uses: actions/checkout@master
+
+      - name: Merge master -> development
+        uses: devmasx/merge-branch@v1.3.1
         with:
+          type: now
+          from_branch: master
+          target_branch: development
           github_token: ${{ github.token }}
-          source_ref: 'master'
-          target_branch: 'development'
-          commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
